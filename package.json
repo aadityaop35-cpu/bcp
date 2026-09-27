@@ -1,0 +1,28 @@
+{
+  "name": "discord-application-bot",
+  "version": "1.0.0",
+  "description": "Production-ready, modular Discord bot with embed builder, application/tryout system, ticketing, and full DB-driven configuration.",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "deploy": "ts-node src/deploy-commands.ts",
+    "deploy:build": "node dist/deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "mongoose": "^8.7.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^22.7.4"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
